@@ -104,7 +104,7 @@ H5端和平台端修改文件`.env.production`（生产环境）/ `.env.developm
 VITE_APP_BASE_API = 'http://127.0.0.1:8085'
 
 // 静态资源文件url
-VITE_APP_RESOURCES_URL = 'https://img.mall4j.com/'
+VITE_APP_RESOURCES_URL = 'http://sfoyv1det.hn-bkt.clouddn.com/'
 
 ```
 

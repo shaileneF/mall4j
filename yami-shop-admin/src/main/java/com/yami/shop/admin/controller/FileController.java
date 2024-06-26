@@ -14,6 +14,8 @@ import com.yami.shop.common.bean.Qiniu;
 import com.yami.shop.common.response.ServerResponseEntity;
 import com.yami.shop.common.util.ImgUploadUtil;
 import com.yami.shop.service.AttachFileService;
+import jakarta.annotation.Resource;
+import jakarta.annotation.Resources;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,7 +39,7 @@ public class FileController {
 	private AttachFileService attachFileService;
 	@Autowired
 	private Qiniu qiniu;
-	@Autowired
+	@Resource
 	private ImgUploadUtil imgUploadUtil;
 	
 	@PostMapping("/upload/element")

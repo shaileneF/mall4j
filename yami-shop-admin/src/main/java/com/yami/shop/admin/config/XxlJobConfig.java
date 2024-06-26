@@ -46,20 +46,20 @@ public class XxlJobConfig {
     @Autowired
     private InetUtils inetUtils;
 
-//    @Bean
-//    public XxlJobSpringExecutor xxlJobExecutor() {
-//
-//        logger.info(">>>>>>>>>>> xxl-job config init.");
-//        XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
-//        xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
-//        xxlJobSpringExecutor.setAppname("mall4j");
-//        // 针对多网卡、容器内部署等情况，可借助 "spring-cloud-commons" 提供的 "InetUtils" 组件灵活定制注册IP
-//        xxlJobSpringExecutor.setIp(inetUtils.findFirstNonLoopbackAddress().getHostAddress());
-//        xxlJobSpringExecutor.setPort(port + 1000);
-//        xxlJobSpringExecutor.setAccessToken(accessToken);
-//        xxlJobSpringExecutor.setLogPath(logPath);
-//        xxlJobSpringExecutor.setLogRetentionDays(3);
-//        return xxlJobSpringExecutor;
-//    }
+    @Bean
+    public XxlJobSpringExecutor xxlJobExecutor() {
+
+        logger.info(">>>>>>>>>>> xxl-job config init.");
+        XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
+        xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
+        xxlJobSpringExecutor.setAppname("mall4j");
+        // 针对多网卡、容器内部署等情况，可借助 "spring-cloud-commons" 提供的 "InetUtils" 组件灵活定制注册IP
+        xxlJobSpringExecutor.setIp(inetUtils.findFirstNonLoopbackAddress().getHostAddress());
+        xxlJobSpringExecutor.setPort(port + 1000);
+        xxlJobSpringExecutor.setAccessToken(accessToken);
+        xxlJobSpringExecutor.setLogPath(logPath);
+        xxlJobSpringExecutor.setLogRetentionDays(3);
+        return xxlJobSpringExecutor;
+    }
 
 }
